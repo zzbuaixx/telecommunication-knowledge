@@ -2,6 +2,8 @@ site_name: My Docs
 nav:
   - Home: index.md
   - scrambler: scrambler.md
+  - galois_field : galois_field.md
+  - vhdl : vhdl.md
 theme: 
     name: material
 
