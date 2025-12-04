@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../galois_field/">
       
-      
-        <link rel="next" href="../galois_field/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>scrambler - My Docs</title>
+        <title>vhdl - My Docs</title>
       
     
     
@@ -61,11 +59,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              scrambler
+              vhdl
             
           </span>
         </div>
@@ -213,30 +206,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    scrambler
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../scrambler/" class="md-nav__link">
         
   
   
@@ -247,48 +220,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      扰码通信
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="扰码通信">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#m" class="md-nav__link">
-    <span class="md-ellipsis">
-      m序列的产生
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -319,10 +250,17 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../vhdl/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -333,6 +271,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -355,38 +294,6 @@
   
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      扰码通信
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="扰码通信">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#m" class="md-nav__link">
-    <span class="md-ellipsis">
-      m序列的产生
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -401,242 +308,9 @@
 
 
 
-  <h1>scrambler</h1>
+  <h1>vhdl</h1>
 
-<h2 id="_1">扰码通信</h2>
-<h3 id="m">m序列的产生</h3>
-<p>下图是一个简单的n=3的m序列，其八进制表示为13 （001011）生成多项式为<span class="arithmatex">\(x^3+x+1\)</span>，其状态逻辑图为</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">CP</th>
-<th style="text-align: center;"><span class="arithmatex">\(a_3\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_2\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_1\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_0\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-<p><img alt="image-20250916094519381" src="../assets/my-image.png" /></p>
-<p>所以，其对应的verilog代码应该如下</p>
-<pre><code class="language-verilog">wire tmp;
-reg r_LFSR[2:0];
-
-assign tmp = r_LFSR[2] ^ r_LFSR[0];
-
-always(posedge clk)
-    begin
-        r_LFSR &lt;= {tmp，r_LFSR[1:0]};
-    end
-</code></pre>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">CP</th>
-<th style="text-align: center;"><span class="arithmatex">\(a_3\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_2\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_1\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_0\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-<p>也可以用高位作为输出，那么用到的生成函数就是<span class="arithmatex">\(1=x^3+x\)</span>，</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">CP</th>
-<th style="text-align: center;"><span class="arithmatex">\(a_3\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_2\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_1\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_0\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-</tbody>
-</table>
-<p>所以 其对应的代码是</p>
-<pre><code>wire tmp;
-reg r_LFSR[2:0];
-
-assign tmp = r_LFSR[2] ^ r_LFSR[0];
-
-always(posedge clk)
-    begin
-        r_LFSR &lt;= {r_LFSR[1:0],tmp};
-    end
-</code></pre>
+<p>学习VHDL语言</p>
 
 
 

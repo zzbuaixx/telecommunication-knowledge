@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../scrambler/">
       
       
-        <link rel="next" href="../galois_field/">
+        <link rel="next" href="../vhdl/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>scrambler - My Docs</title>
+        <title>galois_field - My Docs</title>
       
     
     
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              scrambler
+              galois_field
             
           </span>
         </div>
@@ -213,6 +213,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../scrambler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    scrambler
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -222,13 +244,15 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    scrambler
+    galois_field
     
   </span>
   
@@ -241,7 +265,7 @@
   
   
   <span class="md-ellipsis">
-    scrambler
+    galois_field
     
   </span>
   
@@ -254,6 +278,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -262,19 +288,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#gf23" class="md-nav__link">
     <span class="md-ellipsis">
-      扰码通信
+      以\(GF(2^3)\)为例
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="扰码通信">
+    <nav class="md-nav" aria-label="以\(GF(2^3)\)为例">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#m" class="md-nav__link">
+  <a href="#1-c_0x-m_0x-1" class="md-nav__link">
     <span class="md-ellipsis">
-      m序列的产生
+      1. 计算 \(c_0(x)\)，对应 \(m_0(x) = 1\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-c_1x-m_1x-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 计算 \(c_1(x)\)，对应 \(m_1(x) = x\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-c_2x-m_2x-x2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 计算 \(c_2(x)\)，对应 \(m_2(x) = x^2\)
     </span>
   </a>
   
@@ -289,28 +333,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../galois_field/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    galois_field
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -354,6 +376,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -362,19 +386,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#gf23" class="md-nav__link">
     <span class="md-ellipsis">
-      扰码通信
+      以\(GF(2^3)\)为例
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="扰码通信">
+    <nav class="md-nav" aria-label="以\(GF(2^3)\)为例">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#m" class="md-nav__link">
+  <a href="#1-c_0x-m_0x-1" class="md-nav__link">
     <span class="md-ellipsis">
-      m序列的产生
+      1. 计算 \(c_0(x)\)，对应 \(m_0(x) = 1\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-c_1x-m_1x-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 计算 \(c_1(x)\)，对应 \(m_1(x) = x\)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-c_2x-m_2x-x2" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 计算 \(c_2(x)\)，对应 \(m_2(x) = x^2\)
     </span>
   </a>
   
@@ -401,241 +443,112 @@
 
 
 
-  <h1>scrambler</h1>
-
-<h2 id="_1">扰码通信</h2>
-<h3 id="m">m序列的产生</h3>
-<p>下图是一个简单的n=3的m序列，其八进制表示为13 （001011）生成多项式为<span class="arithmatex">\(x^3+x+1\)</span>，其状态逻辑图为</p>
+<h1 id="_1">伽罗华域学习</h1>
+<h2 id="gf23">以<span class="arithmatex">\(GF(2^3)\)</span>为例</h2>
+<p>本原多项式是<span class="arithmatex">\(p(x) = x^3 + x + 1\)</span>，所以<span class="arithmatex">\(α\)</span>是这个方程的根，有<span class="arithmatex">\(α^3=α+1\)</span>，因此</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">CP</th>
-<th style="text-align: center;"><span class="arithmatex">\(a_3\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_2\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_1\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_0\)</span></th>
+<th style="text-align: center;">0</th>
+<th style="text-align: center;">000</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">0</td>
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;">001</td>
 </tr>
 <tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(α\)</span></td>
+<td style="text-align: center;">010</td>
 </tr>
 <tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(α^2\)</span></td>
+<td style="text-align: center;">100</td>
 </tr>
 <tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="arithmatex">\(α^3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\alpha^3 = \alpha + 1 = 011\)</span></td>
 </tr>
 <tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="arithmatex">\(α^4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\alpha^4 = \alpha \cdot \alpha^3 = \alpha(\alpha+1) = \alpha^2 + \alpha = 110\)</span></td>
 </tr>
 <tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="arithmatex">\(α^5\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\alpha^5 = \alpha \cdot \alpha^4 = \alpha^3 + \alpha^2 = (\alpha+1) + \alpha^2 = \alpha^2 + \alpha + 1 = 111\)</span></td>
 </tr>
 <tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
+<td style="text-align: center;"><span class="arithmatex">\(α^6\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\alpha^6 = \alpha \cdot \alpha^5 = \alpha^3 + \alpha^2 + \alpha = (\alpha+1) + \alpha^2 + \alpha = \alpha^2 + 1 = 101\)</span></td>
 </tr>
 <tr>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
+<td style="text-align: center;"><span class="arithmatex">\(α^7\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\alpha^7 = 1\)</span></td>
 </tr>
 </tbody>
 </table>
-<p><img alt="image-20250916094519381" src="../assets/my-image.png" /></p>
-<p>所以，其对应的verilog代码应该如下</p>
-<pre><code class="language-verilog">wire tmp;
-reg r_LFSR[2:0];
-
-assign tmp = r_LFSR[2] ^ r_LFSR[0];
-
-always(posedge clk)
-    begin
-        r_LFSR &lt;= {tmp，r_LFSR[1:0]};
-    end
-</code></pre>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">CP</th>
-<th style="text-align: center;"><span class="arithmatex">\(a_3\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_2\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_1\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_0\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-<p>也可以用高位作为输出，那么用到的生成函数就是<span class="arithmatex">\(1=x^3+x\)</span>，</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">CP</th>
-<th style="text-align: center;"><span class="arithmatex">\(a_3\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_2\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_1\)</span></th>
-<th style="text-align: center;"><span class="arithmatex">\(a_0\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-</tr>
-<tr>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-<tr>
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">0</td>
-</tr>
-</tbody>
-</table>
-<p>所以 其对应的代码是</p>
-<pre><code>wire tmp;
-reg r_LFSR[2:0];
-
-assign tmp = r_LFSR[2] ^ r_LFSR[0];
-
-always(posedge clk)
-    begin
-        r_LFSR &lt;= {r_LFSR[1:0],tmp};
-    end
+<p>有生成多项式是<span class="arithmatex">\(<span class="arithmatex">\(g(x) = (x + \alpha)(x + \alpha^2)(x + \alpha^3)(x + \alpha^4)=\)</span>\)</span>g(x) = x^4 + \alpha^3 x^3 + x^2 + \alpha x + \alpha^3$$，其生成码字</p>
+<p>系统码的定义是：信息位在码字的高位，监督位（校验位）在低位。公式为：<span class="arithmatex">\(<span class="arithmatex">\(c(x) = x^{n-k} m(x) + \underbrace{(x^{n-k} m(x) \bmod g(x))}_{\text{余数}}\)</span>\)</span>，<span class="arithmatex">\(n=7, k=3\)</span>，所以 <span class="arithmatex">\(n-k=4\)</span>。我们需要把信息多项式左移 4 位，然后除以 <span class="arithmatex">\(g(x)\)</span> 求余数。</p>
+<h4 id="1-c_0x-m_0x-1">1. 计算 <span class="arithmatex">\(c_0(x)\)</span>，对应 <span class="arithmatex">\(m_0(x) = 1\)</span></h4>
+<p>左移 4 位：<span class="arithmatex">\(x^4 \cdot 1 = x^4\)</span></p>
+<p>做除法求余数：<span class="arithmatex">\(x^4 \div g(x)\)</span></p>
+<p>因为 <span class="arithmatex">\(g(x) = x^4 + \alpha^3 x^3 + x^2 + \alpha x + \alpha^3\)</span>，</p>
+<p>显然 <span class="arithmatex">\(x^4 = 1 \cdot g(x) + (\alpha^3 x^3 + x^2 + \alpha x + \alpha^3)\)</span>。</p>
+<p>(注：在二进制域，加法等于减法，移项即可)</p>
+<p>所以余数就是 <span class="arithmatex">\(g(x)\)</span> 去掉最高项 <span class="arithmatex">\(x^4\)</span> 后的部分：<span class="arithmatex">\(\alpha^3 x^3 + x^2 + \alpha x + \alpha^3\)</span>。</p>
+<p>构造码字：<span class="arithmatex">\(<span class="arithmatex">\(c_0(x) = x^4 + (\alpha^3 x^3 + x^2 + \alpha x + \alpha^3)\)</span>\)</span></p>
+<h4 id="2-c_1x-m_1x-x">2. 计算 <span class="arithmatex">\(c_1(x)\)</span>，对应 <span class="arithmatex">\(m_1(x) = x\)</span></h4>
+<ul>
+<li>
+<p>左移 4 位：<span class="arithmatex">\(x^4 \cdot x = x^5\)</span></p>
+</li>
+<li>
+<p>做除法求余数：<span class="arithmatex">\(x^5 \div g(x)\)</span></p>
+</li>
+</ul>
+<p>这就相当于把上一步 <span class="arithmatex">\(c_0(x)\)</span> 的结果乘以 <span class="arithmatex">\(x\)</span>，然后再次对 <span class="arithmatex">\(g(x)\)</span> 取模。</p>
+<p>已知 <span class="arithmatex">\(x^4 \equiv \alpha^3 x^3 + x^2 + \alpha x + \alpha^3 \pmod{g(x)}\)</span></p>
+<p>两边同乘 <span class="arithmatex">\(x\)</span>:<span class="arithmatex">\(x^5 \equiv \alpha^3 x^4 + x^3 + \alpha x^2 + \alpha^3 x\)</span></p>
+<p>把右边的 <span class="arithmatex">\(x^4\)</span> 再次替换掉：</p>
+<p><span class="arithmatex">\(= \alpha^3 (\alpha^3 x^3 + x^2 + \alpha x + \alpha^3) + x^3 + \alpha x^2 + \alpha^3 x\)</span></p>
+<p><span class="arithmatex">\(= (\alpha^6 x^3 + \alpha^3 x^2 + \alpha^4 x + \alpha^6) + x^3 + \alpha x^2 + \alpha^3 x\)</span></p>
+<p>合并同类项（系数相加即异或）：</p>
+<p><span class="arithmatex">\(x^3\)</span> 项: <span class="arithmatex">\(\alpha^6 + 1 = 101 \oplus 001 = 100 = \alpha^2\)</span></p>
+<p><span class="arithmatex">\(x^2\)</span> 项: <span class="arithmatex">\(\alpha^3 + \alpha = 011 \oplus 010 = 001 = 1\)</span></p>
+<p><span class="arithmatex">\(x^1\)</span> 项: <span class="arithmatex">\(\alpha^4 + \alpha^3 = 110 \oplus 011 = 101 = \alpha^6\)</span></p>
+<p>常数项: <span class="arithmatex">\(\alpha^6\)</span></p>
+<p>所以余数是 <span class="arithmatex">\(\alpha^2 x^3 + x^2 + \alpha^6 x + \alpha^6\)</span>。</p>
+<ul>
+<li>构造码字：</li>
+</ul>
+<p>信息位 <span class="arithmatex">\(x^5\)</span> 加上余数：<span class="arithmatex">\(<span class="arithmatex">\(c_1(x) = x^5 + \alpha^2 x^3 + x^2 + \alpha^6 x + \alpha^6\)</span>\)</span></p>
+<h4 id="3-c_2x-m_2x-x2">3. 计算 <span class="arithmatex">\(c_2(x)\)</span>，对应 <span class="arithmatex">\(m_2(x) = x^2\)</span></h4>
+<ul>
+<li>左移 4 位：<span class="arithmatex">\(x^4 \cdot x^2 = x^6\)</span></li>
+<li>原理同上，将 <span class="arithmatex">\(c_1(x)\)</span> 的计算结果再乘以 <span class="arithmatex">\(x\)</span></li>
+</ul>
+<p>已知 <span class="arithmatex">\(x^5 \equiv \alpha^2 x^3 + x^2 + \alpha^6 x + \alpha^6\)</span></p>
+<p>两边同乘 <span class="arithmatex">\(x\)</span>:<span class="arithmatex">\(x^6 \equiv \alpha^2 x^4 + x^3 + \alpha^6 x^2 + \alpha^6 x\)</span></p>
+<p>把右边的 <span class="arithmatex">\(x^4\)</span> 再次替换掉：</p>
+<p><span class="arithmatex">\(= \alpha^2 (\alpha^3 x^3 + x^2 + \alpha x + \alpha^3) + x^3 + \alpha^6 x^2 + \alpha^6 x\)</span></p>
+<p><span class="arithmatex">\(= \alpha^5 x^3   + \alpha^2x^2 + \alpha^3 x + \alpha^5 + x^3 + \alpha^6 x^2 + \alpha^6 x\)</span></p>
+<p><span class="arithmatex">\(= \alpha^5 + \alpha^4 x + x^2 + \alpha^4 x^3 + x^6\)</span></p>
+<p>因此有</p>
+<div class="arithmatex">\[\begin{align*}
+c_0(x) &amp;= \alpha^3 + \alpha x + x^2 + \alpha^3 x^3 + x^4 \\
+c_1(x) &amp;= \alpha^6 + \alpha^6 x + x^2 + \alpha^2 x^3 + x^5 \\
+c_2(x) &amp;= \alpha^5 + \alpha^4 x + x^2 + \alpha^4 x^3 + x^6
+\end{align*}\]</div>
+<pre><code class="language-Plaintext">x^2 + 1        &lt;-- 商 (Quotient)
+          _______________
+x^3+x+1  )  x^5 + 0 + 0 + 0 + 0 + 0
+            x^5 + 0 + x^3 + x^2      &lt;-- 第一步：用 x^2 乘除数 (x^3+x+1)
+            -------------------
+                  x^3 + x^2          &lt;-- 减法结果(即异或)：x^5消掉了
+                  x^3 + 0   + x + 1  &lt;-- 第二步：用 1 乘除数 (x^3+x+1)
+                  -----------------
+                        x^2 + x + 1  &lt;-- 余数 (Remainder)
 </code></pre>
 
 
